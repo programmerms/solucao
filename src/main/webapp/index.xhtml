@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+
+<h:form>
+    <p:commandButton value ="salvar" action="#{consultaPaginadaUsuarioBean.salvar}"/>
+
+    <p:dataTable var="item" value="#{consultaPaginadaUsuarioBean.model}"
+                 paginator="true" rows="5" lazy="true">
+
+        <p:column headerText="Id">
+            <h:outputText value="#{item.id}" />
+        </p:column>
+
+        <p:column headerText="Nome">
+            <h:outputText value="#{item.nome}" />
+        </p:column>
+
+        <p:column headerText="Email">
+            <h:outputText value="#{item.email}" />
+        </p:column>
+
+        <p:column headerText="Senha">
+            <h:outputText value="#{item.senha}" />
+        </p:column>
+
+
+    </p:dataTable>
+</h:form>
+
+</h:body>
+</html>
