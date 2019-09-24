@@ -29,6 +29,17 @@
 		<!--Commons Logging (abstrai a implementação de logging-->
 		<commons-logging>1.2</commons-logging>
 
+		<!--Admin Template-->
+		<Admin-Template.version>1.0.2</Admin-Template.version>
+
+		<!-- org.webjars -->
+		<org-webjars.version>4.7.0</org-webjars.version>
+
+		<!-- org.omnifaces -->
+		<org-omnifaces.version>2.6.1</org-omnifaces.version>
+
+
+
 	</properties>
 
     <dependencyManagement>
@@ -40,7 +51,27 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.adminfaces</groupId>
+                <artifactId>admin-template</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.adminfaces</groupId>
+                <artifactId>admin-theme</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+
+
+
+
         </dependencies>
+
+
+
+
+
     </dependencyManagement>
 
 	<dependencies>
@@ -61,6 +92,15 @@
 			<groupId>org.joinfaces</groupId>
 			<artifactId>primefaces-spring-boot-starter</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.joinfaces</groupId>
+			<artifactId>omnifaces3-spring-boot-starter</artifactId>
+		</dependency>
+
+
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -137,6 +177,26 @@
 			<version>${commons-logging}</version>
 			<scope>compile</scope>
 		</dependency>
+
+
+		<!-- Admin Template -->
+
+
+		<dependency>
+			<groupId>org.joinfaces</groupId>
+			<artifactId>adminfaces-spring-boot-starter</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>4.7.0</version>
+		</dependency>
+
+
+
+
 
     </dependencies>
 

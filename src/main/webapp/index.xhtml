@@ -1,38 +1,27 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="WEB-INF/templates/template.xhtml">
 
-<h:head>
-</h:head>
+    <ui:define name="head-end">
+        <ui:param name="renderBreadCrumb" value="false"/>
+    </ui:define>
 
-<h:body>
+    <ui:define name="title">
+        <p:growl autoUpdate="true" life="4000"/>
 
-<h:form>
-    <p:commandButton value ="salvar" action="#{consultaPaginadaUsuarioBean.salvar}"/>
+        <h2 class="align-center">
+            Bem vindo ao crud do <span class="text-aqua"> <i><a href="http://karanalpe.com.br/" target="_blank"
+                                                          style="text-transform: none;text-decoration: none"> Karanalpe</a></i></span>!
+            <br/>
+            <small>Utilizando <p:link value="Primefaces" href="http://primefaces.org" target="_blank"/>, <p:link value="Bootstrap"
+                                                                                                  href="http://getbootstrap.com/" target="_blank"/> e
+                <p:link value="Admin LTE" href="https://almsaeedstudio.com/themes/AdminLTE/index2.html" target="_blank"/> com
+                <p:link value="JSF" href="https://javaserverfaces.java.net/" target="_blank"/>.
+            </small>
+        </h2>
 
-    <p:dataTable var="item" value="#{consultaPaginadaUsuarioBean.model}"
-                 paginator="true" rows="5" lazy="true">
-
-        <p:column headerText="Id">
-            <h:outputText value="#{item.id}" />
-        </p:column>
-
-        <p:column headerText="Nome">
-            <h:outputText value="#{item.nome}" />
-        </p:column>
-
-        <p:column headerText="Email">
-            <h:outputText value="#{item.email}" />
-        </p:column>
-
-        <p:column headerText="Senha">
-            <h:outputText value="#{item.senha}" />
-        </p:column>
+    </ui:define>
 
 
-    </p:dataTable>
-</h:form>
-
-</h:body>
-</html>
+</ui:composition>
