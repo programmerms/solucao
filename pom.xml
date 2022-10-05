@@ -25,7 +25,7 @@
 		<commons-beanutils.version>1.9.2</commons-beanutils.version>
 
 		<!-- Log4J -->
-		<log4j.version>2.7</log4j.version>
+		<log4j.version>2.17.1</log4j.version>
 		<!--Commons Logging (abstrai a implementação de logging-->
 		<commons-logging>1.2</commons-logging>
 
